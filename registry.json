@@ -1,0 +1,13 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry.json",
+	"name": "hyperui",
+	"homepage": "https://github.com/Hyperseeker/ui",
+	"items": [
+		{
+			"name": "fit-text",
+			"type": "registry:component",
+			"title": "FitText",
+			"description": "Scales text to fit its container using CSS container queries"
+		}
+	]
+}
