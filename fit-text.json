@@ -1,0 +1,34 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+	"name": "fit-text",
+	"type": "registry:component",
+	"title": "FitText",
+	"description": "Scales text to fit its container using CSS container queries",
+	"registryDependencies": ["utils"],
+	"files": [
+		{
+			"path": "components/fit-text.tsx",
+			"type": "registry:component"
+		}
+	],
+	"css": {
+		"@property --fit-text-captured": {
+			"syntax": "\"<length>\"",
+			"initial-value": "0px",
+			"inherits": "true"
+		},
+		".fit-text": {
+			"--fit-text-captured": "initial"
+		},
+		".fit-text-container": {
+			"--fit-text-captured": "100cqi",
+			"--fit-text-available": "var(--fit-text-captured)"
+		},
+		".fit-text-display": {
+			"--fit-text-captured": "100cqi",
+			"--fit-text-ratio": "tan(atan2(var(--fit-text-available), var(--fit-text-available) - var(--fit-text-captured)))",
+			"inline-size": "var(--fit-text-available)",
+			"font-size": "clamp(var(--fit-text-min, 1em), 1em * var(--fit-text-ratio), var(--fit-text-max, infinity * 1px))"
+		}
+	}
+}
