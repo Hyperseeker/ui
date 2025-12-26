@@ -7,7 +7,13 @@
 			"name": "fit-text",
 			"type": "registry:component",
 			"title": "FitText",
-			"description": "Scales text to fit its container using CSS container queries"
+			"description": "Scales text to fit its container using CSS container queries",
+			"files": [
+				{
+					"path": "components/fit-text.tsx",
+					"type": "registry:component"
+				}
+			]
 		}
 	]
 }
