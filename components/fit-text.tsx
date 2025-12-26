@@ -24,7 +24,12 @@ export const FitText: FunctionComponent<FitTextProps> = ({
 	return (
 		<span
 			className={cn("fit-text flex @container", className)}
-			style={{ "--fit-text-max": max, ...(style as CSSProperties) }}
+			style={
+				{
+					"--fit-text-max": max,
+					...(style as CSSProperties),
+				} as CSSProperties
+			}
 			{...props}
 		>
 			<span className="fit-text-container grow @container">
