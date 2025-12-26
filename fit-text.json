@@ -3,6 +3,7 @@
 	"name": "fit-text",
 	"type": "registry:component",
 	"title": "FitText",
+	"author": "Steve Brand <thatfanficguy@protonmail.com>",
 	"description": "Scales text to fit its container using CSS container queries",
 	"registryDependencies": ["utils"],
 	"files": [
