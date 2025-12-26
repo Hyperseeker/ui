@@ -9,6 +9,7 @@
 	"files": [
 		{
 			"path": "components/fit-text.tsx",
+			"content": "import { cn } from \"@/lib/utils\";\nimport type { CSSProperties, FunctionComponent, HTMLAttributes } from \"react\";\n\ntype FitTextProps = HTMLAttributes<HTMLSpanElement> & {\n\t/**\n\t * Maximum width of the text, as a CSS length string. See examples below.\n\t * The contents of the component will not grow beyond the stated width if `max` is provided.\n\t * If not provided, the text will scale to the limits of its container.\n\t *\n\t * @example \"12rem\"\n\t * @example \"800px\"\n\t * @example \"var(--max-text-size)\"\n\t */\n\tmax?: string;\n};\n\nexport const FitText: FunctionComponent<FitTextProps> = ({\n\tchildren,\n\tmax,\n\tclassName,\n\tstyle,\n\t...props\n}) => {\n\treturn (\n\t\t<span\n\t\t\tclassName={cn(\"fit-text flex @container\", className)}\n\t\t\tstyle={{ \"--fit-text-max\": max, ...(style as CSSProperties) }}\n\t\t\t{...props}\n\t\t>\n\t\t\t<span className=\"fit-text-container grow @container\">\n\t\t\t\t<span className=\"fit-text-display block\">{children}</span>\n\t\t\t</span>\n\t\t\t<span aria-hidden=\"true\" className=\"invisible\">\n\t\t\t\t{children}\n\t\t\t</span>\n\t\t</span>\n\t);\n};\n",
 			"type": "registry:component"
 		}
 	],
