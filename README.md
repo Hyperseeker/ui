@@ -21,7 +21,7 @@ Unless stated otherwise in the component's description, that's all you have to d
 ### `<FitText />`
 
 ```bash
-npx shadcn@latest add https://hyperseeker.github.io/ui/fit-text.json
+npx shadcn@latest add Hyperseeker/ui/fit-text
 ```
 
 [FitText](./components/FitText.tsx) allows text to grow in size until it fills up the width of the container.
