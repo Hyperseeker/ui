@@ -24,7 +24,7 @@ Unless stated otherwise in the component's description, that's all you have to d
 npx shadcn@latest add Hyperseeker/ui/fit-text
 ```
 
-[FitText](./components/FitText.tsx) allows text to grow in size until it fills up the width of the container.
+[FitText](./components/fit-text.tsx) allows text to grow in size until it fills up the width of the container.
 
 The most obvious use is to use it in a header of your page, where it can stretch to the width of the viewport.
 
